@@ -1,0 +1,137 @@
+/* ============================================
+   styles.css — Global / Shared Styles
+   Kelson & Isabella Wedding
+   ============================================ */
+
+/* --- Reset & Box Sizing --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- CSS Custom Properties --- */
+:root {
+  /* Colors — placeholders, update to match palette */
+  --color-primary: #7b5e57;
+  --color-accent:  #c9a98a;
+  --color-bg:      #faf8f5;
+  --color-text:    #3a3028;
+  --color-muted:   #9e8f86;
+  --color-white:   #ffffff;
+
+  /* Typography */
+  --font-heading: 'Georgia', serif;
+  --font-body:    'Helvetica Neue', Arial, sans-serif;
+
+  /* Spacing */
+  --space-sm:  0.75rem;
+  --space-md:  1.5rem;
+  --space-lg:  3rem;
+  --space-xl:  6rem;
+
+  /* Max content width */
+  --max-width: 900px;
+}
+
+/* --- Base --- */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin-bottom: var(--space-sm); }
+h3 { font-size: 1.25rem; }
+
+p { margin-bottom: var(--space-sm); }
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Header & Nav --- */
+header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-accent);
+  padding: var(--space-sm) var(--space-md);
+}
+
+nav {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+nav a {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom-color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* --- Page Header (inner pages) --- */
+.page-header {
+  text-align: center;
+  padding-bottom: var(--space-lg);
+}
+
+.page-header p {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: var(--space-md);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--color-accent);
+}
+
+/* --- Utility --- */
+.text-center { text-align: center; }
+.text-muted   { color: var(--color-muted); }

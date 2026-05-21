@@ -1,0 +1,17 @@
+/* ============================================
+   rsvp.css — RSVP Page Styles
+   Kelson & Isabella Wedding
+   ============================================ */
+
+/* --- Google Form Embed --- */
+.form-section {
+  display: flex;
+  justify-content: center;
+}
+
+#rsvp-form {
+  width: 100%;
+  max-width: 640px;
+  min-height: 600px;
+  border: none;
+}

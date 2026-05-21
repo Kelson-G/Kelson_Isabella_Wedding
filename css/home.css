@@ -1,0 +1,29 @@
+/* ============================================
+   home.css — Home Page Styles
+   Kelson & Isabella Wedding
+   ============================================ */
+
+/* --- Hero Section --- */
+.hero {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-sm);
+}
+
+.hero .tagline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--color-accent);
+  font-style: italic;
+  margin-bottom: var(--space-sm);
+}
+
+.hero .date {
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
