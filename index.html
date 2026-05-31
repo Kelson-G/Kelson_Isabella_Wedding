@@ -7,20 +7,20 @@
     <!-- Primary Meta Tags -->
     <title>Kelson &amp; Isabella | Wedding</title>
     <meta name="title" content="Kelson &amp; Isabella | Wedding" />
-    <meta name="description" content="Join us as we celebrate the wedding of Kelson and Isabella. Find all the details, RSVP, and more." />
+    <meta name="description" content="Join us as we celebrate the wedding of Kelson Gneiting and Isabella Kennington. Two receptions — Rigby, ID on August 1st and Vancouver, WA on August 29th, 2026." />
     <meta name="author" content="Kelson &amp; Isabella" />
 
     <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:title" content="Kelson &amp; Isabella | Wedding" />
-    <meta property="og:description" content="Join us as we celebrate the wedding of Kelson and Isabella." />
+    <meta property="og:description" content="Join us as we celebrate the wedding of Kelson Gneiting and Isabella Kennington. Two receptions — Rigby, ID on August 1st and Vancouver, WA on August 29th, 2026." />
     <meta property="og:image" content="photos/og-preview.jpg" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Kelson &amp; Isabella | Wedding" />
-    <meta name="twitter:description" content="Join us as we celebrate the wedding of Kelson and Isabella." />
+    <meta name="twitter:description" content="Join us as we celebrate the wedding of Kelson Gneiting and Isabella Kennington. Two receptions — Rigby, ID on August 1st and Vancouver, WA on August 29th, 2026." />
     <meta name="twitter:image" content="photos/og-preview.jpg" />
 
     <!-- Cloudinary SDK (configured in js/cloudinary.js) -->
@@ -33,20 +33,34 @@
   <body>
 
     <header>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
         <a href="details.html">Details</a>
         <a href="rsvp.html">RSVP</a>
+        <a href="https://www.amazon.com/wedding/guest-view/19BAWF1Z0CGKL" target="_blank" rel="noopener noreferrer">Registry</a>
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <h1>Kelson &amp; Isabella</h1>
-        <p class="tagline">We&rsquo;re getting married!</p>
-        <!-- Date placeholder — update when confirmed -->
-        <p class="date">Date &bull; Venue &bull; Location</p>
-      </section>
+    <main class="slideshow" aria-label="Photos of Kelson and Isabella">
+
+      <div class="slide slide--active" style="background-image: url('photos/Kelson&Isabella-63.jpg')"></div>
+      <div class="slide" style="background-image: url('photos/Kelson&Isabella-45.jpg')"></div>
+      <div class="slide" style="background-image: url('photos/Kelson&Isabella-17.jpg')"></div>
+      <div class="slide" style="background-image: url('photos/Kelson&Isabella-66.jpg')"></div>
+      <div class="slide" style="background-image: url('photos/Kelson&Isabella-131.jpg')"></div>
+      <div class="slide" style="background-image: url('photos/Kelson&Isabella-135.jpg')"></div>
+      <div class="slide" style="background-image: url('photos/Kelson&Isabella-206.jpg')"></div>
+
+      <div class="slideshow__overlay">
+        <p class="slideshow__subtitle">We&rsquo;re Getting Married!</p>
+        <h1 class="slideshow__names">Isabella Kennington<br />&amp; Kelson Gneiting</h1>
+      </div>
+
     </main>
 
     <footer>
@@ -55,5 +69,6 @@
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/slideshow.js"></script>
   </body>
 </html>

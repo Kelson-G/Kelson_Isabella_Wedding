@@ -3,27 +3,70 @@
    Kelson & Isabella Wedding
    ============================================ */
 
-/* --- Hero Section --- */
-.hero {
+/* Make the slideshow fill the full viewport below the header */
+body:has(.slideshow) {
+  overflow: hidden;
+}
+
+/* Full-viewport slideshow container */
+.slideshow {
+  position: fixed;
+  inset: 0;
+  top: var(--header-h, 49px); /* sits flush below header */
+  padding: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Individual slides */
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  will-change: opacity;
+}
+
+.slide--active {
+  opacity: 1;
+}
+
+/* Dark gradient overlay so text is always readable */
+.slideshow__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-md);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  pointer-events: none;
 }
 
-.hero h1 {
-  margin-bottom: var(--space-sm);
-}
-
-.hero .tagline {
+.slideshow__subtitle {
   font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: var(--color-accent);
   font-style: italic;
-  margin-bottom: var(--space-sm);
+  font-size: clamp(1.1rem, 3.5vw, 1.75rem);
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
 }
 
-.hero .date {
-  color: var(--color-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.95rem;
+.slideshow__names {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 6vw, 3.5rem);
+  color: #ffffff;
+  line-height: 1.25;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  font-weight: normal;
+  margin: 0;
 }
+

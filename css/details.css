@@ -13,3 +13,53 @@
 .details-section:last-child {
   border-bottom: none;
 }
+
+/* --- Event Card --- */
+.event-card {
+  margin-top: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.event-card__date {
+  font-size: 1.05rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.event-card__address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.event-card__address a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.event-card__address a:hover {
+  color: var(--color-accent);
+}
+
+/* --- Registry Button --- */
+.btn-registry {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  padding: 0.75rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-registry:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  text-decoration: none;
+}

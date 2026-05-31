@@ -30,10 +30,16 @@
   <body>
 
     <header>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav>
         <a href="index.html">Home</a>
         <a href="details.html">Details</a>
         <a href="rsvp.html" class="active">RSVP</a>
+        <a href="https://www.amazon.com/wedding/guest-view/19BAWF1Z0CGKL" target="_blank" rel="noopener noreferrer">Registry</a>
       </nav>
     </header>
 
@@ -43,7 +49,23 @@
         <p>Please let us know if you&rsquo;ll be joining us.</p>
       </section>
 
-      <!-- Google Form embed — src to be added later -->
+      <!-- RSVP stats — populated by forms.js when APPS_SCRIPT_URL is set in forms.js -->
+      <div id="rsvp-stats" class="rsvp-stats" hidden>
+        <p class="rsvp-stats__total">Expected guests: <strong id="rsvp-count-total"></strong></p>
+        <div class="rsvp-stats__breakdown">
+          <div class="rsvp-stats__venue">
+            <span class="rsvp-stats__label">Washington</span>
+            <strong id="rsvp-count-wa"></strong>
+          </div>
+          <div class="rsvp-stats__venue">
+            <span class="rsvp-stats__label">Idaho</span>
+            <strong id="rsvp-count-id"></strong>
+          </div>
+        </div>
+        <p class="rsvp-stats__sub"><span id="rsvp-count-forms"></span> received &bull; maybes counted at 25%</p>
+      </div>
+
+      <!-- Google Form embed — set GOOGLE_FORM_URL in js/forms.js -->
       <section class="form-section">
         <iframe
           id="rsvp-form"

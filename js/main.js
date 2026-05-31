@@ -13,3 +13,23 @@
     }
   });
 })();
+
+// Hamburger nav toggle
+(function initNavToggle() {
+  const toggle = document.querySelector('.nav-toggle');
+  const header = document.querySelector('header');
+  if (!toggle || !header) return;
+
+  toggle.addEventListener('click', () => {
+    const isOpen = header.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close nav when a link is tapped on mobile
+  document.querySelectorAll('nav a').forEach((link) => {
+    link.addEventListener('click', () => {
+      header.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();

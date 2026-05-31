@@ -135,3 +135,93 @@ footer {
 /* --- Utility --- */
 .text-center { text-align: center; }
 .text-muted   { color: var(--color-muted); }
+
+/* --- Nav Toggle (Hamburger) — hidden on desktop --- */
+.nav-toggle {
+  display: none;
+}
+
+/* ============================================
+   Mobile Responsive (max 640px)
+   ============================================ */
+@media (max-width: 640px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-left: auto;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  /* Hamburger → X */
+  header.nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  header.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  header.nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Mobile nav — hidden until opened */
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid var(--color-accent);
+    margin-top: var(--space-sm);
+    gap: 0;
+  }
+
+  header.nav-open nav {
+    display: flex;
+  }
+
+  nav a {
+    padding: 0.85rem var(--space-md);
+    border-bottom: none;
+    border-top: 1px solid rgba(201, 169, 138, 0.2);
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav a:first-child {
+    border-top: none;
+  }
+
+  nav a:hover,
+  nav a.active {
+    background-color: rgba(201, 169, 138, 0.12);
+    border-bottom: none;
+  }
+
+  main {
+    padding: var(--space-md) var(--space-sm);
+  }
+}
