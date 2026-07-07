@@ -43,6 +43,11 @@
   color: var(--color-accent);
 }
 
+/* --- Event Subsection --- */
+.event-subsection {
+  margin-top: 1em;
+}
+
 /* --- Registry Button --- */
 .btn-registry {
   display: inline-block;
